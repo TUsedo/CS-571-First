@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration strict = "true" status = "debug" name="XMLConfigTest">
+<Properties>
+	<Property name = "filename">D:/Github/Java/OS/OS-Ass-1(Attempt 2)/Log/test.log</Property>
+</Properties>
+<Appenders>
+	<Appender type = "File" name = "FILE" filename="${filename}">
+		<Layout type = "PatternLayout">
+			<Pattern>%d{dd MMM yyyy HH:MM} {%m}%n%n</Pattern>
+		</Layout>
+	</Appender>
+</Appenders>
+<Loggers>
+	<Logger name="Bridge" level = "debug" additivity = "true">
+		<AppenderRef ref="FILE" />
+	</Logger>
+	<Root level = "debug">
+		<AppenderRef ref = "FILE" />
+	</Root>
+</Loggers>
+
+</Configuration>
